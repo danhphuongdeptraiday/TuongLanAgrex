@@ -1,4 +1,11 @@
 let current_product = JSON.parse(localStorage.getItem("current_product"));
+let current_product_eng = JSON.parse(
+  localStorage.getItem("current_product_eng")
+);
+
+// console.log(current_product_eng);
+let title_page_product_name = document.querySelector("title");
+title_page_product_name.innerText = current_product.product_name;
 
 let EachProduct_page_eng = {
   product_status: `<b>Status: </b>
@@ -20,6 +27,9 @@ let tuong_lan_introduce_container = document.querySelector(
 );
 
 let amount = document.querySelector(".amount");
+let product_name = document.getElementsByClassName("product_name");
+let main_pic = document.querySelector(".top_left_side img");
+let bottom_left_side = document.querySelector(".bottom_left_side");
 
 if (page_language == "ENG") {
   product_status.innerHTML = EachProduct_page_eng.product_status;
@@ -28,38 +38,95 @@ if (page_language == "ENG") {
   buy_now.innerText = EachProduct_page_eng.buy_now;
   tuong_lan_introduce_container.innerText =
     EachProduct_page_eng.tuong_lan_introduce_container;
-}
+  title_page_product_name.innerText = current_product_eng.product_name;
 
-let product_name = document.getElementsByClassName("product_name");
-for (let i = 0; i < product_name.length; i++) {
-  product_name[i].innerText = current_product.product_name;
-}
-let main_pic = document.querySelector(".top_left_side img");
-main_pic.src = current_product.product_img;
+  for (let i = 0; i < product_name.length; i++) {
+    product_name[i].innerText = current_product_eng.product_name;
+  }
+  main_pic.src = current_product_eng.product_img;
 
-let bottom_left_side = document.querySelector(".bottom_left_side");
+  for (let i = 0; i < 4; i++) {
+    let img = document.createElement("img");
+    img.src = current_product_eng.product_img;
+    // console.log(img);
+    bottom_left_side.appendChild(img);
+  }
 
-for (let i = 0; i < 4; i++) {
-  let img = document.createElement("img");
-  img.src = current_product.product_img;
-  console.log(img);
-  bottom_left_side.appendChild(img);
-}
-
-let expand_product = document.querySelector(".extend_product");
-let temp = "";
-for (let i = 0; i < 5; i++) {
-  temp += `
-    <div class="item">
-          <div class="item_image">
-            <img src="${current_product.product_img}" alt="" />
+  let expand_product = document.querySelector(".extend_product");
+  let temp = "";
+  for (let i = 0; i < 5; i++) {
+    temp += `
+      <div class="item">
+            <div class="item_image">
+              <img src="${current_product_eng.product_img}" alt="" />
+            </div>
+            <div class="item_description">
+              <b>${current_product_eng.product_name}</b>
+              <i>........</i>
+            </div>
           </div>
-          <div class="item_description">
-            <b>${current_product.product_name}</b>
-            <i>........</i>
+      `;
+  }
+
+  expand_product.innerHTML = temp;
+} else {
+  for (let i = 0; i < product_name.length; i++) {
+    product_name[i].innerText = current_product.product_name;
+  }
+  main_pic.src = current_product.product_img;
+
+  for (let i = 0; i < 4; i++) {
+    let img = document.createElement("img");
+    img.src = current_product.product_img;
+    // console.log(img);
+    bottom_left_side.appendChild(img);
+  }
+
+  let expand_product = document.querySelector(".extend_product");
+  let temp = "";
+  for (let i = 0; i < 5; i++) {
+    temp += `
+      <div class="item">
+            <div class="item_image">
+              <img src="${current_product.product_img}" alt="" />
+            </div>
+            <div class="item_description">
+              <b>${current_product.product_name}</b>
+              <i>........</i>
+            </div>
           </div>
-        </div>
-    `;
+      `;
+  }
+
+  expand_product.innerHTML = temp;
 }
 
-expand_product.innerHTML = temp;
+// for (let i = 0; i < product_name.length; i++) {
+//   product_name[i].innerText = current_product.product_name;
+// }
+// main_pic.src = current_product.product_img;
+
+// for (let i = 0; i < 4; i++) {
+//   let img = document.createElement("img");
+//   img.src = current_product.product_img;
+console.log(img);
+//   bottom_left_side.appendChild(img);
+// }
+
+// let expand_product = document.querySelector(".extend_product");
+// let temp = "";
+// for (let i = 0; i < 5; i++) {
+//   temp += `
+//     <div class="item">
+//           <div class="item_image">
+//             <img src="${current_product.product_img}" alt="" />
+//           </div>
+//           <div class="item_description">
+//             <b>${current_product.product_name}</b>
+//             <i>........</i>
+//           </div>
+//         </div>
+//     `;
+// }
+
+// expand_product.innerHTML = temp;

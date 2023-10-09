@@ -88,8 +88,10 @@ let main_page_eng = {
     "TUONG LAN ARGEX CO., LTD would like to sincerely thank you for your interest and always welcome you to our company.",
 };
 let h2 = `<h2 class="detailsButton">Chi Tiết</h2>`;
-
+let t = list_product_vie;
 if (page_language == "ENG") {
+  let title_page_product_name = document.querySelector("title");
+  title_page_product_name.innerText = "Home Page";
   list_product_vie = list_product_eng;
 
   banner_establish.innerText = main_page_eng.banner_establish;
@@ -102,6 +104,8 @@ if (page_language == "ENG") {
     main_page_eng.tuong_lan_introduce_container;
   product_title.innerText = main_page_eng.product_title;
   h2 = `<h2 class="detailsButton">Detail</h2>`;
+} else {
+  list_product_vie = t;
 }
 
 function init() {
@@ -211,12 +215,11 @@ function getEle() {
       "productid"
     );
 
-  console.log(id_of_product);
+  localStorage.setItem("current_product", JSON.stringify(t[id_of_product]));
 
-  console.log(list_product_vie[id_of_product]);
   localStorage.setItem(
-    "current_product",
-    JSON.stringify(list_product_vie[id_of_product])
+    "current_product_eng",
+    JSON.stringify(list_product_eng[id_of_product])
   );
   window.location.href = "./EachProduct/EachProduct.html";
 }

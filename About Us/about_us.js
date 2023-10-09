@@ -44,6 +44,8 @@ let certificate_overview = document.querySelector(".certificate h3");
 let certificate_sub_heading = document.querySelectorAll(".certificate h2");
 
 if (page_language == "ENG") {
+  let title_page_product_name = document.querySelector("title");
+  title_page_product_name.innerText = "About Us";
   over_intro.innerText = about_us_eng.over_intro;
   for (let i = 0; i < about_us_eng.history_description.length; i++) {
     history_description_p[i].innerText = about_us_eng.history_description[i];

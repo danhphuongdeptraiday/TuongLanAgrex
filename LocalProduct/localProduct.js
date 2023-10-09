@@ -196,7 +196,11 @@ let list_product_in_LocalProduct_page_eng = [
   },
 ];
 
+let t = list_product_in_LocalProduct_page;
+
 if (page_language == "ENG") {
+  let title_page_product_name = document.querySelector("title");
+  title_page_product_name.innerText = "Products";
   searching_part_heading.innerText =
     localProduct_page_eng.searching_part_heading;
   tuong_lan_introduce_container.innerText =
@@ -204,6 +208,8 @@ if (page_language == "ENG") {
   input_placeholder.placeholder = "Yellow flower sticky rice";
 
   list_product_in_LocalProduct_page = list_product_in_LocalProduct_page_eng;
+} else {
+  list_product_in_LocalProduct_page = t;
 }
 
 function init() {
@@ -240,9 +246,11 @@ function moveToPage() {
     );
 
   console.log(id_of_product);
+  localStorage.setItem("current_product", JSON.stringify(t[id_of_product]));
+
   localStorage.setItem(
-    "current_product",
-    JSON.stringify(list_product_in_LocalProduct_page[id_of_product])
+    "current_product_eng",
+    JSON.stringify(list_product_in_LocalProduct_page_eng[id_of_product])
   );
   window.location.href = "../EachProduct/EachProduct.html";
 }

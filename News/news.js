@@ -22,6 +22,8 @@ let news_page_eng = {
 };
 
 if (page_language == "ENG") {
+  let title_page_product_name = document.querySelector("title");
+  title_page_product_name.innerText = "News";
   highlight_news.innerText = news_page_eng.highlight_news;
   news_title.innerText = news_page_eng.news_title;
   news_details.innerText = news_page_eng.news_details;

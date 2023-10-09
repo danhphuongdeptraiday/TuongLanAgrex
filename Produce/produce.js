@@ -16,6 +16,8 @@ let tuong_lan_introduce_container = document.querySelector(
 );
 
 if (page_language == "ENG") {
+  let title_page_product_name = document.querySelector("title");
+  title_page_product_name.innerText = "Process";
   produce_process_title.innerText = produce_page.produce_process_title;
 
   for (let i = 0; i < produce_page.heading_define.length; i++) {
