@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*                              MENU                                */
+.menu_container {
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 130rem;
+  padding: 0rem 6rem 0rem 4rem;
+
+  margin: 0 auto;
+}
+
+/* logo */
+.logo_container {
+  width: 17rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo_container:hover {
+  cursor: pointer;
+}
+
+.logo_container .logo_img {
+  width: 4rem;
+  height: 4rem;
+  margin-right: 1.2rem;
+}
+
+.logo_container .logo_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo_container .brand_name {
+  font-weight: 900;
+  padding-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/*     item_container     */
+.item_container {
+  width: 90rem;
+  display: flex;
+  justify-content: center;
+}
+
+.item_container .item {
+  display: flex;
+  padding: 1.8rem 1.5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+  position: relative;
+}
+
+.item_container .item:hover {
+  background-color: rgb(235, 235, 85);
+  color: rgb(212, 78, 78);
+  cursor: pointer;
+}
+
+.item_container .item a:hover {
+  color: rgb(212, 78, 78);
+}
+
+.drop_down {
+  width: 100%;
+  height: 20rem;
+  background-color: white;
+  position: absolute;
+  top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.drop_down div {
+  text-align: start;
+  padding: 1.2rem;
+  color: #2b4e28;
+}
+
+.drop_down div:hover {
+  background-color: rgb(235, 235, 85);
+  color: rgb(212, 78, 78);
+  cursor: pointer;
+}
+
+.item .about_us .a:hover ~ .drop_down {
+  background-color: red;
+}
+
+.item_container .item i {
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+}
+/* icon_menu */
+.menu_icon_container {
+  width: 12rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu_icon_container .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  border: rgb(108, 150, 46) solid 0.1rem;
+  background-color: rgb(202, 240, 146);
+  color: rgb(108, 150, 46);
+}
+
+.menu_icon_container .icon:hover {
+  cursor: pointer;
+  background-color: rgb(128, 163, 74);
+  color: #b2d397;
+}
+
+/*              SECTION: BANNER DRAGONFLY               */
+.banner_dragonfly {
+  max-width: 144rem;
+  min-height: 60rem;
+  margin: 0 auto;
+  position: relative;
+  background-image: url("https://cenrjrdducmjwprodjnw.supabase.co/storage/v1/object/public/hihi/chuonchuon.jpg?t=2023-10-09T13%3A22%3A54.907Z");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner_dragonfly .over_intro {
+  width: 60rem;
+  padding: 4rem;
+  background-color: #6cd513;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+  border: 1rem solid white;
+  border-radius: 60rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+/*                  SECTION: HISTORY CONTAINER                  */
+.history_container {
+  max-width: 144rem;
+  min-height: 60rem;
+  margin: 0 auto;
+  background-color: #f5f6f8;
+  margin-top: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem;
+  color: #3a5a4d;
+}
+
+.history_image_container {
+  width: 280rem;
+  height: 100%;
+}
+
+.history_image_container img {
+  width: 100%;
+  height: 100%;
+}
+
+.history_description {
+  width: 265rem;
+  padding: 4rem 8rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.history_description p {
+  margin-bottom: 2rem;
+}
+
+/*                          SECTION: VERSION                         */
+.vision_container {
+  color: #3a5a4d;
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.vision_heading {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  padding-left: 7rem;
+}
+
+.slogan1 {
+  background: linear-gradient(90deg, #fffffe, #56af00);
+  height: 15rem;
+  padding: 3.5rem 10rem;
+}
+
+.slogan2 {
+  display: flex;
+  justify-content: flex-end;
+  background: linear-gradient(45deg, #56af00, #fffffe);
+  height: 15rem;
+  padding: 3.5rem 10rem;
+}
+
+.slogan_details {
+  font-size: 1.6rem;
+  width: 35rem;
+  text-align: justify;
+}
+
+/*                      Certificate                     */
+.certificate_container {
+  max-width: 144rem;
+  margin: 0 auto;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255 251 239);
+}
+
+table {
+  max-width: 1400px;
+  border: 2px solid green;
+  text-align: center;
+  color: green;
+  font-size: 18px;
+}
+
+tr {
+  border: 2px solid green;
+}
+
+th {
+  border: 2px solid green;
+  padding: 20px;
+  font-weight: bold;
+}
+
+td {
+  padding: 20px;
+
+  border: 2px solid green;
+}
+
+/* Certificate */
+.certificate {
+  max-width: 144rem;
+  background-color: white;
+  margin: 0 auto;
+  padding: 40px 90px;
+}
+
+.certificate img {
+  width: 500px;
+}
+
+.certificate h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.certificate h2 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+/*                          SECTION: FOOTER                          */
+
+.footer {
+  max-width: 144rem;
+  margin: 2rem auto 0rem;
+  height: 59rem;
+  padding: 3rem 5rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  flex-direction: column;
+  color: white;
+}
+
+.footer::before {
+  content: "";
+  background-image: url("https://cenrjrdducmjwprodjnw.supabase.co/storage/v1/object/public/hihi/banner_footer.png?t=2023-10-09T13%3A18%3A34.660Z");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  /* opacity: 0.2; */
+  background-color: rgb(202, 200, 200);
+  background-blend-mode: multiply;
+}
+
+.footer > img {
+  width: 30rem;
+  position: absolute;
+  transform: rotate(180deg);
+  transform: scaleX(-1);
+  filter: FlipH;
+  right: -5.4rem;
+  top: 2.8rem;
+}
+
+.footer .title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  border-bottom: 0.15rem solid white;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.footer_details {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.footer_item .footer_card {
+  display: flex;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer_item {
+  padding: 1.9rem 0px 0px 0px;
+  width: 33.3%;
+}
+
+.footer_item .footer_card i {
+  margin-right: 1rem;
+  font-size: 1.8rem;
+}
+
+.footer_details_middle {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.copy_right {
+  width: 100%;
+  padding: 2rem;
+  font-size: 2.2rem;
+  background-color: #6ad213;
+  text-align: center;
+  font-weight: bold;
+  color: whitesmoke;
+}

@@ -1,0 +1,268 @@
+/*                                    Banner news                                     */
+
+.banner_news {
+  max-width: 144rem;
+  min-height: 100vh;
+  margin-top: 5rem;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Top banner */
+.banner_news .top_banner {
+  background-color: white;
+}
+
+.banner_news .top_banner .news_heading {
+  font-size: 2.8rem;
+  line-height: 1.5;
+  font-weight: bolder;
+  position: absolute;
+  right: 10rem;
+  top: 20rem;
+}
+
+.banner_news .top_banner .img_news {
+  width: 60rem;
+  height: 60rem;
+  position: relative;
+  overflow: hidden;
+  left: -8rem;
+}
+
+.banner_news .top_banner .img_news img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Bottom banner */
+.bottom_banner {
+  min-height: 40vh;
+  background: linear-gradient(white, 45%, #56af00);
+}
+.bottom_banner .highlight_news {
+  font-size: 3rem;
+  padding-left: 5.9rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  border-top-right-radius: 2.4rem;
+  border-bottom-right-radius: 2.4rem;
+  background-color: #39594c;
+  width: 45rem;
+  color: white;
+}
+
+.bottom_banner .some_news {
+  display: flex;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 2rem 4rem 4rem;
+  height: 40rem;
+  justify-content: space-around;
+}
+
+.some_news_img {
+  width: 40%;
+  height: 100%;
+  background-image: url("https://cenrjrdducmjwprodjnw.supabase.co/storage/v1/object/public/hihi/each_rice_product.jpg?t=2023-10-09T13%3A16%3A49.021Z");
+  background-size: cover;
+  border: 1.5rem whitesmoke solid;
+  border-radius: 2.5rem;
+}
+
+.some_news_details {
+  width: 45%;
+  height: 100%;
+}
+
+.some_news_details .news_date {
+  font-size: 2rem;
+  border-left: 1rem #dcb884 solid;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+.some_news_details .news_title {
+  font-size: 3.4rem;
+  margin-bottom: 2rem;
+}
+
+.some_news_details .news_details {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+.some_news_details .news_more_btn {
+  padding: 1.3rem 0rem;
+  text-align: center;
+  background-color: white;
+  width: 14rem;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.some_news_details .news_more_btn:hover {
+  cursor: pointer;
+  background-color: rgb(201, 194, 194);
+}
+
+/*                                SECTION 3: BANNER NEWS                                */
+.news_container {
+  padding: 10rem 0rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto 5rem;
+  max-width: 144rem;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+.news_container .news_container_card {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+}
+.news_container .news_container_card .news_card {
+  color: #39594c;
+  border: 5px solid #39594c;
+  width: 35rem;
+  padding: 3rem 2rem 1.5rem;
+  border-radius: 1.2rem;
+  position: relative;
+  margin: 0 5rem;
+}
+
+.news_card .news_card_date {
+  position: absolute;
+  padding: 0.8rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  background-color: #39594c;
+  width: 90%;
+  top: -2rem;
+  font-size: 2rem;
+}
+
+.news_container .news_container_card .news_card .news_card_title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.news_container .news_container_card .news_card .news_card_short_description {
+  font-size: 1.2rem;
+}
+
+.news_container .news_container_card .news_card div {
+  margin-bottom: 2rem;
+}
+
+.news_container .news_container_card .news_card img {
+  width: 100%;
+  border-radius: 1.2rem;
+}
+
+.news_container .news_container_read_more_btn {
+  padding: 1.3rem 0rem;
+  text-align: center;
+  background-color: #dcb884;
+  width: 14rem;
+  font-size: 1.5rem;
+  border-radius: 0.4rem;
+  box-shadow: #39594c 3.4px 3.4px 3.2px;
+  margin-top: 4rem;
+}
+
+.news_container .news_container_read_more_btn:hover {
+  cursor: pointer;
+  background-color: #a07d4e;
+}
+
+/*                            SECTION: FOOTER                               */
+.footer {
+  max-width: 144rem;
+  margin: 2rem auto 0rem;
+  height: 59rem;
+  padding: 3rem 5rem;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+  flex-direction: column;
+  color: white;
+}
+
+.footer::before {
+  content: "";
+  background-image: url("https://cenrjrdducmjwprodjnw.supabase.co/storage/v1/object/public/hihi/banner_footer.png?t=2023-10-09T13%3A18%3A34.660Z");
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  /* opacity: 0.2; */
+  background-color: rgb(202, 200, 200);
+  background-blend-mode: multiply;
+}
+
+.footer > img {
+  width: 30rem;
+  position: absolute;
+  transform: rotate(180deg);
+  transform: scaleX(-1);
+  filter: FlipH;
+  right: -5.4rem;
+  top: 2.8rem;
+}
+
+.footer .title {
+  font-weight: 500;
+  font-size: 1.8rem;
+  border-bottom: 0.15rem solid white;
+  margin-bottom: 3rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+.footer_details {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.footer_item .footer_card {
+  display: flex;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer_item {
+  padding: 1.9rem 0px 0px 0px;
+  width: 33.3%;
+}
+
+.footer_item .footer_card i {
+  margin-right: 1rem;
+  font-size: 1.8rem;
+}
+
+.footer_details_middle {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.copy_right {
+  width: 100%;
+  padding: 2rem;
+  font-size: 2.2rem;
+  background-color: #6ad213;
+  text-align: center;
+  font-weight: bold;
+  color: whitesmoke;
+}
